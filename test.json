@@ -51,10 +51,12 @@
                             "type": "Aspirateur",
                             "years":"2018" ,
                             "capacity": 4,
-                            "size": 1.60,"option": [
+                            "size": 1.60,
+                            "option": [
                                 "Tête nettoyanate",
                                 "batterie",
-                                "silencieux"
+                                "silencieux",
+                                "Mieux que le V8"
                             ]
                         }
                         
@@ -93,7 +95,7 @@
                 }
             ],
             "other":[
-                
+
             ]
         }
     ]
