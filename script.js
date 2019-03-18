@@ -1,0 +1,2 @@
+db.createCollection('appartements');
+

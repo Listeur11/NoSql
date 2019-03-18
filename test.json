@@ -1,0 +1,67 @@
+{
+    "appartements": [
+        {
+            "title": "titre",
+            "description": "description",
+            "location": {
+                "address": "Adresse",
+                "cp": "City",
+                "country": "France"
+            },
+            "infos": {
+                "pieces": 3,
+                "surface": 60.50,
+                "bedrooms": 2,
+                "year": 2010,
+                "floor": 1,
+                "price": 190000
+            },
+            "pieces": [
+                {
+                    "name": "cuisine",
+                    "surface": 7,
+                    "window": 3,
+                    "equipements": [
+                        "frigo",
+                        "plaques de cuisson",
+                        "dyson v10"
+                    ]
+                },
+                {
+                    "name": "salon",
+                    "surface": 22,
+                    "window": 2,
+                    "equipements": [
+                        "tele 4k",
+                        "homepod",
+                        "ps4"
+                    ]
+                }
+            ],
+            "equipements": {
+                "inside": [
+                    "interphone"
+                ],
+                "outside": [
+                    "garage",
+                    "cave"
+                ]
+            },
+            "outside": [
+                {
+                    "type": "Jardin",
+                    "surface": "6000,50m",
+                    "water": true,
+                    "golf": true
+                },
+                {
+                    "type": "Terasse",
+                    "surface": "20,50m"
+                }
+            ],
+            "other":[
+                
+            ]
+        }
+    ]
+}
