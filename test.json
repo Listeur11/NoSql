@@ -2,6 +2,7 @@
     "appartements": [
         {
             "title": "titre",
+            "type": "Appartement",
             "description": "description",
             "location": {
                 "address": "Adresse",
@@ -22,9 +23,41 @@
                     "surface": 7,
                     "window": 3,
                     "equipements": [
-                        "frigo",
-                        "plaques de cuisson",
-                        "dyson v10"
+                        {
+                            "name": "Frigo",
+                            "type": "Frigo",
+                            "years":"2017" ,
+                            "capacity": 120,
+                            "size": 1.60,
+                            "option": [
+                                "tirroir",
+                                "congélateur",
+                                "silencieux"
+                            ]
+                        },
+                        {
+                            "name": "Plaques de cuisson",
+                            "type": "Plaques ",
+                            "years":"2019" ,
+                            "capacity": "",
+                            "size": 0.80,
+                            "option": [
+                                "4 feux",
+                                "timer"
+                            ]
+
+                        },{
+                            "name": "Dyson v10",
+                            "type": "Aspirateur",
+                            "years":"2018" ,
+                            "capacity": 4,
+                            "size": 1.60,"option": [
+                                "Tête nettoyanate",
+                                "batterie",
+                                "silencieux"
+                            ]
+                        }
+                        
                     ]
                 },
                 {
