@@ -6,7 +6,8 @@ var object = {
     "description": "description",
     "location": {
         "address": "Adresse",
-        "cp": "City",
+        "city": "City",
+        "cp": "31200",
         "country": "France"
     },
     "infos": {
@@ -25,49 +26,33 @@ var object = {
             "equipements": [
                 {
                     "name": "Frigo",
-                    "type": "Frigo",
+                    "type": "fridge",
                     "years":"2017" ,
                     "capacity": 120,
-                    "size": 1.60,
-                    "option": [
-                        "tirroir",
-                        "congélateur",
-                        "silencieux"
-                    ]
+                    "size": 1.60
                 },
                 {
-                    "name": "Plaques de cuisson",
-                    "type": "Plaques ",
-                    "years":"2019" ,
-                    "capacity": "",
-                    "size": 0.80,
-                    "option": [
-                        "4 feux",
-                        "timer"
-                    ]
-
-                },{
                     "name": "Dyson V10",
                     "type": "Aspirateur",
                     "years":"2018" ,
                     "capacity": 4,
-                    "size": 1.60,"option": [
-                        "Tête nettoyanate",
-                        "batterie",
-                        "silencieux"
-                    ]
+                    "size": 1.60
                 }
                 
             ]
         },
         {
-            "name": "salon",
+            "name": "ch1",
             "surface": 22,
             "window": 2,
             "equipements": [
-                "tele 4k",
-                "homepod",
-                "ps4"
+                {
+                    "name": "Dyson V10",
+                    "type": "Aspirateur",
+                    "years":"2018" ,
+                    "capacity": 4,
+                    "size": 1.60
+                }
             ]
         }
     ],
@@ -99,11 +84,33 @@ var object = {
 
 db.appartements.insertOne(object)
 
-// find appartements greater than 2 pieces
-db.appartements.find({'pieces': {$size: 2}});
+function findByPiecesCOunt(piecesCount) {
+    // find appartements greater than X pieces
+    db.appartements.find({'pieces': {$size: piecesCount}});
 
-// find appartement wich have a DYSON V10
+}
 
-db.appartements.find({
-    $where: 'this.pieces.length >= 2'
-});
+// Function to find appartements by city
+function findByCity(city) {
+    print('Searching appartements in ' + city)
+    var appartements = db.appartements.find({'location.city': city}).pretty().toArray();
+    //printjson(appartements)
+    print('Found ' + appartements.length + ' appartements in ' + city)
+}
+
+function name(piecesCount) {
+    print('Searching appartements with ' + piecesCount + ' pieces')
+    db.appartements.find({'location.city': piecesCount}).toArray(function(err, results) {print('a');print(err)});
+}
+
+db.appartements.find({'title': 'titre'}).toArray(function(err, results) {print('a');print(err)});
+
+
+// Function to find appartements with an equipement type
+function findEquipementType(equipement) {
+    print('Searching appartements with ' + equipement)
+    db.appartements.find({'location.city': 'City'}).toArray()then((res) => {
+        printjson(res)
+    });
+
+}

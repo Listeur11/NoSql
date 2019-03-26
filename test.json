@@ -6,7 +6,8 @@
             "description": "description",
             "location": {
                 "address": "Adresse",
-                "cp": "City",
+                "city": "City",
+                "cp": "31200",
                 "country": "France"
             },
             "infos": {
@@ -45,18 +46,16 @@
                                 "4 feux",
                                 "timer"
                             ]
-
+        
                         },{
-                            "name": "Dyson v10",
+                            "name": "Dyson V10",
                             "type": "Aspirateur",
                             "years":"2018" ,
                             "capacity": 4,
-                            "size": 1.60,
-                            "option": [
+                            "size": 1.60,"option": [
                                 "Tête nettoyanate",
                                 "batterie",
-                                "silencieux",
-                                "Mieux que le V8"
+                                "silencieux"
                             ]
                         }
                         
@@ -85,17 +84,17 @@
             "outside": [
                 {
                     "type": "Jardin",
-                    "surface": "6000,50m",
+                    "surface": 6000.50,
                     "water": true,
                     "golf": true
                 },
                 {
                     "type": "Terasse",
-                    "surface": "20,50m"
+                    "surface": 20.50
                 }
             ],
             "other":[
-
+        
             ]
         }
     ]
