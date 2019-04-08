@@ -132,7 +132,7 @@ function findEquipementName(equipement) {
 function findInfos(infos,value){
         infos = 'infos'+infos
         print('Searching appartements with ' + infos + ' = ' + value)
-        db.appartements.find({infos: value }).toArray()then((res) => {
+        db.appartements.find({infos: value}).toArray()then((res) => {
             printjson(res)
         });
 
