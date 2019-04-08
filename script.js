@@ -133,7 +133,7 @@ function findEquipementType(equipement) {
     });
 
 }
-
+// récupération d'appartement en fonction du nom ou de l'équipement présent dans l
 function findEquipementName(equipement) {
     print('Searching appartements with ' + equipement)
     var apparts = db.appartements.find({'pieces.equipements.name': equipement});
@@ -143,16 +143,11 @@ function findEquipementName(equipement) {
     printjson(apparts);
 }
 
-function findEquipementName(equipement) {
-    print('Searching appartements with ' + equipement)
-
-}
-
+// récupération d'appartement en fonction des parramètres présents ( fonctions test )
 function findInfos(infos,value){
         infos = 'infos'+infos
         print('Searching appartements with ' + infos + ' = ' + value)
-        db.appartements.find({infos: value}).toArray()then((res) => {
+        db.appartements.find({infos : value}).toArray()then((res) => {
             printjson(res)
         });
-
 }
