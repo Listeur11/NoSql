@@ -1,3 +1,22 @@
+// Nous devons avoir au minimum 3 serveurs : 1 primary et 2 Secondary .  	Mise en place du 1er serveur (replicaSet)
+mongod --replSet rs0 --port 25010 --dbpath /data/rs0S1 
+        
+// Connection du client 	
+mongo --port 25010 
+
+// Pour initialiser le replicaSet: 
+rs.initiate();
+
+// Pour ajouter le serveur au replicatSet
+rs.add("localhost:25012");
+
+// Pour instance l’arbitre:
+mongod —port 30000 —dbpath /data/arb —replSet rs0
+
+// Pour ajouter l’arbitre au replicatSet:
+rs.addArb("localhost:30000");
+
+
 db.createCollection('appartements');
 
 var object = {
