@@ -114,3 +114,26 @@ function findEquipementType(equipement) {
     });
 
 }
+
+function findEquipementName(equipement) {
+    print('Searching appartements with ' + equipement)
+    var apparts = db.appartements.find({'pieces.equipements.name': equipement});
+
+    apparts += db.appartements.find({'pieces.equipements' : equipement})
+
+    printjson(apparts);
+}
+
+function findEquipementName(equipement) {
+    print('Searching appartements with ' + equipement)
+
+}
+
+function findInfos(infos,value){
+        infos = 'infos'+infos
+        print('Searching appartements with ' + infos + ' = ' + value)
+        db.appartements.find({infos: value }).toArray()then((res) => {
+            printjson(res)
+        });
+
+}
